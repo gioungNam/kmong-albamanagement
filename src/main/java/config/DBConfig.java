@@ -9,5 +9,5 @@ public class DBConfig {
     // 필요시 변경하세요!
     public static final String DB_USER = "root";
     // 필요시 변경하세요!
-    public static final String DB_PASSWORD = "0000";
+    public static final String DB_PASSWORD = "";
 }

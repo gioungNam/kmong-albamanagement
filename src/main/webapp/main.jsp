@@ -118,6 +118,11 @@
         .message p:hover {
             background-color: #f0f0f0; /* 호버 시 배경색 변경 */
         }
+
+        .my-schedule {
+            background-color: #e0f7fa; 
+            font-weight: bold; /* 글꼴 굵게 */
+        }
     </style>
       </head>
       <body>
@@ -297,6 +302,12 @@
         document.querySelectorAll('.worker-row').forEach(function(row) {
             var user = '${sessionScope.user}';
             var userId = row.getAttribute('data-user-id');
+
+            // 현재 사용자가 행의 사용자와 일치하는 경우 클래스 추가
+            if (user === userId) {
+                row.classList.add('my-schedule');
+            }
+
             // 각 'td'에 클릭 이벤트 추가
             row.querySelectorAll('td').forEach(function(td, index) {
                 if (index === 0) return; // 첫 번째 'td' 건너뛰기
